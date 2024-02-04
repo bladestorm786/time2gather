@@ -1,0 +1,67 @@
+import React from 'react'
+import BlogPostCard2 from './blog-post-card2'
+import styles from './home.module.css'
+
+const Home = (props) => {
+  // Sample event data
+  const events = [
+    {
+      name: 'Event 1',
+      date: '2024-02-10',
+      time: '15:00',
+      location: 'Event Venue 1',
+      description: 'Description for Event 1.',
+    },
+    {
+      name: 'Event 2',
+      date: '2024-02-15',
+      time: '18:30',
+      location: 'Event Venue 2',
+      description: 'Description for Event 2.',
+    },
+    // Add more events as needed
+  ];
+
+  return (
+    <div className={styles['container']}>
+      {/* Sidebar code remains unchanged */}
+      <div className={styles['sidebar']}>
+        {/* ... */}
+      </div>
+
+      {/* Blog section with event cards */}
+      <div className={styles['blog']}>
+        <div className={styles['container3']}>
+          {/* Event 1 */}
+          <BlogPostCard2
+            eventName={events[0].name}
+            eventDate={events[0].date}
+            eventTime={events[0].time}
+            eventLocation={events[0].location}
+            eventDescription={events[0].description}
+            profileSrc="https://images.unsplash.com/photo-1611232658409-0d98127f237f?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDIzfHxwb3J0cmFpdCUyMHdvbWFufGVufDB8fHx8MTYyNjQ1MDU4MQ&amp;ixlib=rb-1.2.1&amp;h=1200"
+            rootClassName="rootClassName3"
+          ></BlogPostCard2>
+        </div>
+
+        <div className={styles['container4']}>
+          {/* Event 2 */}
+          <BlogPostCard2
+            eventName={events[1].name}
+            eventDate={events[1].date}
+            eventTime={events[1].time}
+            eventLocation={events[1].location}
+            eventDescription={events[1].description}
+            imageSrc="https://images.unsplash.com/photo-1595565312451-23051ab0666c?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDI0fHxwb3J0cmFpdCUyMHdvbWFufGVufDB8fHx8MTYyNjQ1MDU4MQ&amp;ixlib=rb-1.2.1&amp;h=1000"
+            profileSrc="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDExfHxwb3J0cmFpdCUyMHdvbWFufGVufDB8fHx8MTYyNjQ1MDU4MQ&amp;ixlib=rb-1.2.1&amp;h=1200"
+            rootClassName="rootClassName"
+          ></BlogPostCard2>
+        </div>
+
+        {/* Add more event cards as needed */}
+      </div>
+    </div>
+  )
+}
+
+export default Home
